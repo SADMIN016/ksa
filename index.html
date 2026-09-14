@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Sea Fish — Sea to Store | Fresh Fish &amp; Seafood, Al Ahsa, Saudi Arabia</title>
+<meta name="description" content="Fresh Sea Fish (شركة طازج البحر للاسماك) — fresh catch every day, cleaned and hygienic, delivered free across Al Ahsa, Hofuf and the Eastern Province. Call +966 53 432 2278.">
+<meta property="og:title" content="Fresh Sea Fish — Sea to Store">
+<meta property="og:description" content="Fresh catch every day. Premium quality, cleaned and hygienic, free delivery in Al Ahsa.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#17457e;
+  --navy-d:#0f3260;
+  --navy-x:#0a2447;
+  --green:#0e7c3f;
+  --green-l:#16a34a;
+  --yellow:#ffd11a;
+  --red:#e23b2e;
+  --wa:#25d366;
+
+  --ink:#0e1b2a;
+  --muted:#5b6b7d;
+  --line:#e2e8f0;
+  --bg:#ffffff;
+  --soft:#f4f8fc;
+  --soft2:#e9f2fa;
+
+  --r:16px;
+  --shadow:0 2px 14px rgba(15,50,96,.08);
+  --shadow-lg:0 22px 55px rgba(15,50,96,.18);
+  --head:'Montserrat',system-ui,sans-serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --ar:'Tajawal',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html[dir="rtl"] body,html[dir="rtl"] .hd{font-family:var(--ar)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+.hd{font-family:var(--head);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+
+/* ---------------- buttons ---------------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.7rem;border-radius:999px;font-weight:700;font-size:.94rem;font-family:var(--head);border:2px solid transparent;cursor:pointer;transition:.25s;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#1eb257;transform:translateY(-2px)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-l);transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-d);transform:translateY(-2px)}
+.btn-line{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+
+/* ---------------- top bar ---------------- */
+.topbar{background:var(--navy-x);color:rgba(255,255,255,.82);font-size:.8rem;padding:.55rem 0}
+.topbar .wrap{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.topbar a{display:inline-flex;align-items:center;gap:.4rem;transition:.2s}
+.topbar a:hover{color:var(--yellow)}
+.topbar svg{width:14px;height:14px}
+.topbar .right{margin-inline-start:auto;display:flex;gap:1.1rem;align-items:center}
+.langbtn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:.2rem .85rem;font-size:.76rem;font-weight:700;cursor:pointer;font-family:var(--head);transition:.2s}
+.langbtn:hover{background:var(--green);border-color:var(--green)}
+
+/* ---------------- header ---------------- */
+header{position:sticky;top:0;z-index:120;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:.3s}
+header.small{box-shadow:var(--shadow)}
+.nav{display:flex;align-items:center;gap:1.3rem;height:150px;transition:.3s}
+header.small .nav{height:115px}
+.logo{display:flex;align-items:center;gap:.75rem}
+.logo-img{height:118px;width:auto;max-width:none;display:block;transition:.3s}
+header.small .logo-img{height:88px}
+.logo .txt{font-family:var(--head);font-weight:900;font-size:1.16rem;line-height:1.05;color:var(--navy);letter-spacing:-.01em}
+.logo .txt em{font-style:normal;color:var(--green)}
+.logo .txt small{display:block;font-size:.6rem;font-weight:700;letter-spacing:.28em;color:var(--muted);margin-top:.2rem}
+.links{display:flex;gap:1.5rem;margin-inline-start:auto;font-size:.9rem;font-weight:600}
+.links a{color:var(--muted);padding:.3rem 0;border-bottom:2px solid transparent;transition:.2s}
+.links a:hover{color:var(--navy);border-color:var(--green)}
+.navcta{display:flex;align-items:center;gap:.6rem}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem;margin-inline-start:auto}
+.burger span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;margin:5px 0}
+
+/* ---------------- hero ---------------- */
+.hero{position:relative;min-height:clamp(540px,80vh,760px);display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:var(--navy-d)}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .fallback{position:absolute;inset:0;background:radial-gradient(900px 520px at 75% 18%,rgba(23,69,126,.7),transparent 62%),linear-gradient(165deg,#2f7fc4 0%,#17457e 45%,#0a2447 100%)}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,30,45,.9),rgba(6,30,45,.76) 45%,rgba(6,30,45,.96))}
+.hero-in{position:relative;z-index:3;padding:5.5rem 0 8rem;width:min(900px,90vw)}
+.kicker{display:inline-flex;align-items:center;gap:.5rem;background:var(--green);color:#fff;border-radius:999px;padding:.45rem 1.2rem;font-size:.74rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;font-family:var(--head)}
+.hero h1{font-family:var(--head);font-size:clamp(2.3rem,6vw,4.2rem);line-height:1.03;font-weight:900;margin:1.4rem 0 1.1rem;letter-spacing:-.03em;text-transform:uppercase;text-shadow:0 4px 22px rgba(0,0,0,.5)}
+.hero h1 em{font-style:normal;color:var(--yellow)}
+.hero p{font-size:1.07rem;color:rgba(255,255,255,.9);width:min(650px,92%);margin-inline:auto;text-shadow:0 2px 12px rgba(0,0,0,.55)}
+.hero-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2.3rem}
+.hero-foot{position:absolute;inset-inline:0;bottom:0;z-index:3;border-top:1px solid rgba(255,255,255,.16);background:rgba(10,36,71,.55);backdrop-filter:blur(6px)}
+.hero-foot .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.25rem 0}
+.hf b{display:block;font-family:var(--head);font-size:1.55rem;color:var(--yellow);line-height:1.2}
+.hf span{font-size:.76rem;color:rgba(255,255,255,.7);font-weight:500}
+
+/* ---------------- offer banner ---------------- */
+.offer{background:linear-gradient(100deg,var(--navy) 0%,var(--navy-d) 55%,var(--green) 100%);color:#fff;padding:2.6rem 0}
+.offer .wrap{display:flex;align-items:center;gap:2.2rem;flex-wrap:wrap;justify-content:center;text-align:center}
+.offer .poster{width:210px;flex:none;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.35);line-height:0}
+.offer .poster img{width:100%;height:auto;display:block}
+.offer .lbl{font-family:var(--head);font-size:.78rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow)}
+.offer h3{font-family:var(--head);font-size:clamp(1.4rem,3vw,2rem);font-weight:900;text-transform:uppercase;letter-spacing:-.02em}
+.offer .price{display:grid;place-items:center;width:118px;height:118px;border-radius:50%;background:var(--yellow);color:var(--navy-x);font-family:var(--head);font-weight:900;line-height:1;flex:none;box-shadow:0 10px 28px rgba(0,0,0,.25)}
+.offer .price b{font-size:2.5rem;display:block}
+.offer .price span{font-size:.72rem;letter-spacing:.1em;margin-top:.15rem}
+.offer p{color:rgba(255,255,255,.85);font-size:.94rem;max-width:34rem}
+
+/* ---------------- banner image ---------------- */
+.bannerimg{background:var(--navy-x);line-height:0}
+.bannerimg img{width:100%;height:auto;display:block}
+
+/* ---------------- strip ---------------- */
+.strip{background:var(--green);color:#fff;padding:.8rem 0;overflow:hidden;white-space:nowrap}
+.strip-track{display:inline-flex;gap:2.6rem;animation:slide 36s linear infinite;font-family:var(--head);font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------------- section shell ---------------- */
+section{padding:5.5rem 0}
+.head{max-width:46rem;margin:0 auto 3.2rem;text-align:center}
+.head.left{margin-inline:0;text-align:start}
+.tag{display:inline-block;font-family:var(--head);font-size:.74rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:.8rem}
+.head h2{font-family:var(--head);font-size:clamp(1.9rem,3.7vw,2.8rem);font-weight:900;line-height:1.15;letter-spacing:-.025em;color:var(--navy)}
+.head p{color:var(--muted);margin-top:1rem;font-size:1.01rem}
+.rule{width:54px;height:4px;background:var(--green);border-radius:2px;margin:1.1rem auto 0}
+.head.left .rule{margin-inline:0}
+
+/* ---------------- trust ---------------- */
+.trust{background:var(--soft);padding:4rem 0;border-block:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.tr{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.9rem 1.5rem;text-align:center;transition:.3s}
+.tr:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent}
+.tr .ic{width:58px;height:58px;margin:0 auto 1rem;border-radius:50%;background:var(--soft2);display:grid;place-items:center;color:var(--navy)}
+.tr .ic svg{width:27px;height:27px}
+.tr h3{font-family:var(--head);font-size:1.02rem;font-weight:800;margin-bottom:.4rem;color:var(--navy)}
+.tr p{font-size:.88rem;color:var(--muted)}
+
+/* ---------------- about ---------------- */
+.about-in{display:grid;grid-template-columns:1fr 1fr;gap:4.2rem;align-items:center}
+.frame{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:linear-gradient(150deg,var(--navy),var(--navy-x));display:grid;place-items:center}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.frame .ph{color:rgba(255,255,255,.22);width:40%}
+.about .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.2rem;padding-top:2rem;border-top:1px solid var(--line)}
+.about .stats b{display:block;font-family:var(--head);font-size:1.8rem;color:var(--green);line-height:1.1}
+.about .stats span{font-size:.79rem;color:var(--muted)}
+.about ul{list-style:none;margin:1.5rem 0 0;display:grid;gap:.7rem}
+.about li{display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;color:var(--muted)}
+.about li svg{width:19px;height:19px;color:var(--green);flex:none;margin-top:.35rem}
+
+/* ---------------- catalog ---------------- */
+.catalog{background:var(--soft)}
+.tabs{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.8rem}
+.tab{border:2px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:.55rem 1.3rem;font-size:.85rem;font-weight:700;font-family:var(--head);cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--green);color:var(--green)}
+.tab.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.tile{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1/1;display:block;background:linear-gradient(150deg,#2f7fc4,var(--navy-x));isolation:isolate}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.6s cubic-bezier(.2,.8,.2,1)}
+.tile:hover img{transform:scale(1.07)}
+.tile .art{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:46%;color:rgba(255,255,255,.3)}
+.tile .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,36,71,0) 34%,rgba(10,36,71,.9) 100%)}
+.tile .info{position:absolute;inset-inline:0;bottom:0;padding:1.1rem 1.15rem;color:#fff;z-index:2}
+.tile .nm{font-family:var(--head);font-size:1.02rem;font-weight:800;line-height:1.25;display:block}
+.tile .alt{font-family:var(--ar);font-size:.85rem;color:rgba(255,255,255,.75);display:block}
+.tile .mini{font-size:.74rem;color:rgba(255,255,255,.6);display:block;margin-top:.1rem}
+.tile .row{display:flex;align-items:flex-end;justify-content:space-between;gap:.6rem;margin-top:.5rem}
+.tile .pr{font-family:var(--head);font-weight:800;font-size:1.02rem;color:var(--yellow)}
+.tile .pr small{font-weight:600;font-size:.7rem;color:rgba(255,255,255,.65)}
+.tile .go{width:34px;height:34px;border-radius:50%;background:var(--wa);display:grid;place-items:center;flex:none;transition:.2s}
+.tile:hover .go{transform:scale(1.12)}
+.tile .go svg{width:17px;height:17px;color:#fff}
+.flag{position:absolute;top:.85rem;inset-inline-start:.85rem;z-index:2;font-family:var(--head);font-size:.63rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .6rem;border-radius:6px;background:var(--green);color:#fff}
+.flag.p{background:#fff;color:var(--navy)}
+.flag.o{background:var(--yellow);color:var(--navy-x)}
+
+/* ---------------- price list ---------------- */
+.tablewrap{border:1px solid var(--line);border-radius:var(--r);overflow-x:auto;background:#fff;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;min-width:720px}
+thead{background:var(--navy);color:#fff}
+th{text-align:start;font-family:var(--head);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;padding:1rem 1.2rem;white-space:nowrap}
+td{padding:.9rem 1.2rem;border-top:1px solid var(--line);font-size:.91rem;vertical-align:middle}
+tbody tr:hover{background:var(--soft)}
+td.name{font-weight:700}
+td.name em{display:block;font-style:normal;font-family:var(--ar);font-size:.83rem;color:var(--muted);font-weight:400}
+td.num{font-family:var(--head);font-weight:800;color:var(--navy);white-space:nowrap}
+td.num.w{color:var(--green)}
+.legend{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem;font-size:.82rem;color:var(--muted)}
+.legend i{font-style:normal;display:inline-flex;align-items:center;gap:.4rem}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+
+/* ---------------- process ---------------- */
+.process{background:var(--soft)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8rem;position:relative}
+.steps::before{content:"";position:absolute;top:28px;inset-inline:12%;height:2px;background:repeating-linear-gradient(90deg,var(--green) 0 8px,transparent 8px 16px);opacity:.45}
+.st{text-align:center;position:relative}
+.st .n{width:58px;height:58px;margin:0 auto 1.1rem;border-radius:50%;background:#fff;border:3px solid var(--green);color:var(--navy);display:grid;place-items:center;font-family:var(--head);font-size:1.15rem;font-weight:900;position:relative;z-index:2}
+.st h3{font-family:var(--head);font-size:1.03rem;font-weight:800;margin-bottom:.4rem;color:var(--navy)}
+.st p{font-size:.88rem;color:var(--muted)}
+
+/* ---------------- wholesale ---------------- */
+.b2b-in{display:grid;grid-template-columns:1.05fr .95fr;gap:3.8rem;align-items:center}
+.b2b-in ul{list-style:none;margin:1.5rem 0 2rem;display:grid;gap:.7rem}
+.b2b-in ul li{display:flex;gap:.7rem;color:var(--muted);font-size:.95rem}
+.b2b-in ul li svg{width:19px;height:19px;color:var(--green);flex:none;margin-top:.35rem}
+.tiers{display:grid;gap:.85rem}
+.tier{border:1px solid var(--line);border-radius:var(--r);padding:1.15rem 1.4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--soft);transition:.25s}
+.tier:hover{border-color:var(--green);transform:translateX(4px)}
+html[dir="rtl"] .tier:hover{transform:translateX(-4px)}
+.tier b{font-family:var(--head);font-size:.98rem;display:block;color:var(--navy)}
+.tier small{color:var(--muted);font-size:.81rem}
+.tier .off{background:var(--navy);color:#fff;font-family:var(--head);font-weight:800;font-size:.83rem;padding:.34rem .85rem;border-radius:999px;white-space:nowrap}
+.tier .off.list{background:var(--soft2);color:var(--muted)}
+
+/* ---------------- reviews ---------------- */
+.reviews{background:var(--soft)}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.rvc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.9rem 1.7rem}
+.stars{color:var(--yellow);font-size:.9rem;letter-spacing:.14em;margin-bottom:.8rem}
+.rvc p{font-size:.93rem;color:var(--muted);margin-bottom:1.3rem}
+.rvc .who{display:flex;align-items:center;gap:.8rem;border-top:1px solid var(--line);padding-top:1.1rem}
+.rvc .av{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:var(--head);font-weight:800;flex:none}
+.rvc .who b{display:block;font-size:.9rem;color:var(--navy)}
+.rvc .who span{font-size:.77rem;color:var(--muted)}
+
+/* ---------------- cities ---------------- */
+.city-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.ct{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.35rem .8rem;text-align:center;transition:.25s}
+.ct:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:var(--shadow)}
+.ct svg{width:22px;height:22px;color:var(--green);margin:0 auto .55rem}
+.ct b{display:block;font-family:var(--head);font-size:.93rem;color:var(--navy)}
+.ct small{font-size:.73rem;color:var(--muted)}
+
+/* ---------------- faq ---------------- */
+.faqwrap{max-width:52rem;margin-inline:auto}
+.q-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:.75rem;overflow:hidden;transition:.25s}
+.q-item.open{border-color:var(--green);box-shadow:var(--shadow)}
+.q-item button{width:100%;background:none;border:0;cursor:pointer;font-family:var(--head);display:flex;justify-content:space-between;align-items:center;gap:1.2rem;padding:1.25rem 1.5rem;text-align:start;font-size:.99rem;font-weight:700;color:var(--navy)}
+.q-item button i{font-style:normal;font-size:1.5rem;color:var(--green);transition:.25s;flex:none;line-height:1}
+.q-item.open button i{transform:rotate(45deg)}
+.q-item .a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.q-item .a p{padding:0 1.5rem 1.3rem;color:var(--muted);font-size:.93rem}
+
+/* ---------------- contact ---------------- */
+.contact{background:var(--navy-x);color:#fff}
+.contact .head h2{color:#fff}
+.c-in{display:grid;grid-template-columns:.95fr 1.05fr;gap:3.2rem;align-items:start}
+.c-row{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}
+.c-row .ic{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;color:var(--yellow);flex:none}
+.c-row .ic svg{width:20px;height:20px}
+.c-row b{display:block;font-family:var(--head);font-size:.71rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:800}
+.c-row span{font-size:1rem;font-weight:600}
+.qrbox{display:flex;align-items:center;gap:1.1rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:1rem 1.2rem;margin-top:.4rem}
+.qrbox .qr{width:104px;height:104px;border-radius:10px;background:#fff;display:grid;place-items:center;flex:none;overflow:hidden;position:relative}
+.qrbox .qr img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:5px}
+.qrbox .qr svg{width:46px;height:46px;color:var(--wa)}
+.qrbox b{display:block;font-family:var(--head);font-size:.95rem;margin-bottom:.2rem}
+.qrbox span{font-size:.84rem;color:rgba(255,255,255,.7)}
+form.card{background:#fff;border-radius:var(--r);padding:2.1rem;color:var(--ink)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.f{display:flex;flex-direction:column;gap:.4rem}
+.f.full{grid-column:1/-1}
+.f label{font-size:.79rem;font-weight:700;color:var(--muted)}
+.f input,.f select,.f textarea{font-family:inherit;font-size:.93rem;padding:.8rem 1rem;border:1.5px solid var(--line);border-radius:10px;background:var(--soft);color:var(--ink);transition:.2s}
+.f input:focus,.f select:focus,.f textarea:focus{outline:0;border-color:var(--navy);background:#fff}
+.f textarea{resize:vertical;min-height:100px}
+form.card .btn{width:100%;margin-top:1.3rem}
+.fnote{font-size:.77rem;color:var(--muted);text-align:center;margin-top:.85rem}
+
+/* ---------------- footer ---------------- */
+footer{background:#06182f;color:rgba(255,255,255,.6);padding:4.2rem 0 0;font-size:.89rem}
+.f-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.15fr;gap:2.5rem;padding-bottom:2.8rem}
+footer h4{color:#fff;font-family:var(--head);font-size:.95rem;font-weight:800;margin-bottom:1rem}
+footer a{display:block;padding:.27rem 0;transition:.2s}
+footer a:hover{color:var(--yellow)}
+footer .intro{margin-top:1rem;max-width:24rem;line-height:1.8}
+.social{display:flex;gap:.6rem;margin-top:1.3rem}
+.social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;padding:0}
+.social a:hover{background:var(--green);color:#fff}
+.social svg{width:17px;height:17px}
+.vat{margin-top:1.2rem;font-size:.8rem;color:rgba(255,255,255,.45)}
+.f-bot{border-top:1px solid rgba(255,255,255,.1);padding:1.3rem 0 3.5rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.81rem}
+
+/* ---------------- float ---------------- */
+.float{position:fixed;inset-block-end:24px;inset-inline-end:24px;z-index:110;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 28px rgba(37,211,102,.45);animation:pulse 2.8s infinite}
+.float svg{width:28px;height:28px}
+@keyframes pulse{0%,100%{box-shadow:0 10px 28px rgba(37,211,102,.45)}50%{box-shadow:0 10px 28px rgba(37,211,102,.45),0 0 0 15px rgba(37,211,102,0)}}
+
+/* ---------------- reveal ---------------- */
+.rev{opacity:0;transform:translateY(26px);transition:.8s cubic-bezier(.16,1,.3,1)}
+.rev.in{opacity:1;transform:none}
+
+/* ---------------- responsive ---------------- */
+@media(max-width:1080px){
+  .trust-grid,.grid,.steps{grid-template-columns:repeat(2,1fr)}
+  .city-grid{grid-template-columns:repeat(3,1fr)}
+  .rv-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .steps::before{display:none}
+}
+@media(max-width:880px){
+  .about-in,.b2b-in,.c-in{grid-template-columns:1fr;gap:2.6rem}
+  .logo-img{height:62px}
+  header.small .logo-img{height:54px}
+  .nav{height:92px}
+  header.small .nav{height:80px}
+  .links{display:none}
+  .burger{display:block}
+  .navcta .btn{display:none}
+  .links.show{display:flex;flex-direction:column;position:absolute;top:100%;inset-inline:0;background:#fff;padding:1.2rem 4vw;border-bottom:1px solid var(--line);gap:.2rem}
+  .links.show a{padding:.65rem 0}
+  section{padding:4rem 0}
+  .hero-foot .wrap{grid-template-columns:repeat(2,1fr);gap:1.1rem}
+  .topbar .wrap>a:nth-child(2){display:none}
+}
+@media(max-width:620px){
+  .trust-grid,.grid,.steps,.fields{grid-template-columns:1fr}
+  .city-grid{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr}
+  .frame{aspect-ratio:4/3}
+  .qrbox{flex-direction:column;text-align:center}
+  .offer .poster{width:170px}
+}
+</style>
+</head>
+<body>
+
+<svg style="display:none">
+  <symbol id="i-fish" viewBox="0 0 64 40">
+    <ellipse cx="28" cy="20" rx="21" ry="11.5" fill="currentColor"/>
+    <path d="M48 20 L63 9 L63 31 Z" fill="currentColor"/>
+    <path d="M24 8.6 Q28 2 33 6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <circle cx="16" cy="16.5" r="2.4" fill="#0a2447"/>
+  </symbol>
+  <symbol id="i-shrimp" viewBox="0 0 64 40">
+    <path d="M56 9c-9-4-24-4-33 2-8 5-10 14-4 19 5 4 13 3 16-2 2-4 0-8-4-8" stroke="currentColor" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M56 9l6-4M56 9l5 5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="50" cy="13" r="2.2" fill="#0a2447"/>
+  </symbol>
+  <symbol id="i-crab" viewBox="0 0 64 40">
+    <ellipse cx="32" cy="23" rx="16" ry="10" fill="currentColor"/>
+    <path d="M14 15 L6 7 M50 15 L58 7" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    <path d="M4 4a5 5 0 016 5M60 4a5 5 0 00-6 5" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M18 31l-8 6M46 31l8 6M26 33l-4 6M38 33l4 6" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="26" cy="20" r="2.2" fill="#0a2447"/><circle cx="38" cy="20" r="2.2" fill="#0a2447"/>
+  </symbol>
+  <symbol id="i-squid" viewBox="0 0 64 40">
+    <ellipse cx="32" cy="15" rx="13" ry="13" fill="currentColor"/>
+    <path d="M22 26c-1 8-4 11-8 13M28 28c-1 8-2 10-4 12M36 28c1 8 2 10 4 12M42 26c1 8 4 11 8 13" stroke="currentColor" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <circle cx="27" cy="14" r="2.3" fill="#0a2447"/><circle cx="37" cy="14" r="2.3" fill="#0a2447"/>
+  </symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96s-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8.2 8.2 0 0 1-2.4-1.48 9 9 0 0 1-1.67-2.07c-.17-.3 0-.46.13-.61.13-.14.3-.35.44-.53s.2-.3.3-.5a.55.55 0 0 0 0-.52c-.08-.15-.67-1.6-.91-2.2-.24-.57-.49-.5-.67-.5h-.57a1.1 1.1 0 0 0-.79.37 3.32 3.32 0 0 0-1.04 2.47 5.77 5.77 0 0 0 1.21 3.06c.15.2 2.1 3.2 5.08 4.49a17 17 0 0 0 1.7.63 4.08 4.08 0 0 0 1.87.12 3.06 3.06 0 0 0 2-1.41 2.47 2.47 0 0 0 .17-1.41c-.07-.13-.27-.2-.57-.35M12.05 21.8h-.02a9.8 9.8 0 0 1-4.97-1.36l-.36-.21-3.7.97.99-3.6-.23-.37a9.78 9.78 0 1 1 8.29 4.57M20.36 3.65A11.75 11.75 0 0 0 1.9 17.83L.2 24l6.32-1.66a11.74 11.74 0 0 0 5.62 1.43h.01a11.75 11.75 0 0 0 8.21-20.12"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m2 7 10 6 10-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="m8 12 3 3 5-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v20M4 6l16 12M20 6 4 18M12 6l-3-3M12 6l3-3M12 18l-3 3M12 18l3 3"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M1 5h11v11H1zM12 8h4.5l3.5 3.5V16h-8z"/><circle cx="6" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M2 7c2.5-2.5 4.5-2.5 7 0s4.5 2.5 7 0 4.5-2.5 6 0M2 13c2.5-2.5 4.5-2.5 7 0s4.5 2.5 7 0 4.5-2.5 6 0M2 19c2.5-2.5 4.5-2.5 7 0s4.5 2.5 7 0 4.5-2.5 6 0"/></symbol>
+  <symbol id="i-knife" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 17 13 7l4 4L7 21H3zM14 6l4-4 4 4-4 4z"/></symbol>
+  <symbol id="i-protein" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12h3l2-5 3 10 3-8 2 3h5"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+</svg>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <a href="#" class="js-tel"><svg><use href="#i-phone"/></svg><span class="js-phone"></span></a>
+    <a href="#contact"><svg><use href="#i-pin"/></svg><span data-en="Al Hufuf, Al Ahsa" data-ar="الهفوف، الأحساء">Al Hufuf, Al Ahsa</span></a>
+    <div class="right">
+      <a href="#delivery"><svg><use href="#i-truck"/></svg><span data-en="Free delivery — quick &amp; reliable" data-ar="توصيل مجاني — سريع وموثوق">Free delivery — quick &amp; reliable</span></a>
+      <button class="langbtn" id="langBtn">عربي</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <img class="logo-img" src="LOGO.png" alt="Fresh Sea Fish — Sea to Store">
+    </a>
+    <nav class="links" id="links">
+      <a href="#catalog" data-en="Products" data-ar="المنتجات">Products</a>
+      <a href="#pricing" data-en="Price List" data-ar="قائمة الأسعار">Price List</a>
+      <a href="#wholesale" data-en="Wholesale" data-ar="الجملة">Wholesale</a>
+      <a href="#faq" data-en="FAQ" data-ar="الأسئلة">FAQ</a>
+      <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+    </nav>
+    <div class="navcta">
+      <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg><span data-en="Order Now" data-ar="اطلب الآن">Order Now</span></a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero" id="top">
+  <div class="fallback"></div>
+  <img class="bg" src="net_fish.webp" alt="" onerror="this.remove()">
+  <div class="veil"></div>
+  <div class="hero-in">
+    <span class="kicker"><svg style="width:13px;height:13px"><use href="#i-wave"/></svg>
+      <span data-en="Fresh catch every day" data-ar="صيد طازج كل يوم">Fresh catch every day</span>
+    </span>
+    <h1 data-en="Fresh sea fish, <em>sea to store</em>" data-ar="أسماك بحرية طازجة، <em>من البحر إلى المتجر</em>">Fresh sea fish, <em>sea to store</em></h1>
+    <p data-en="Premium quality fish, shrimp and seafood — cleaned, hygienic and delivered free across Al Ahsa and the Eastern Province. Order on WhatsApp and we deliver the same day." data-ar="أسماك وروبيان ومأكولات بحرية بجودة ممتازة — منظّفة وصحية وتُوصَّل مجاناً في الأحساء والمنطقة الشرقية. اطلب عبر واتساب ونوصل في نفس اليوم.">Premium quality fish, shrimp and seafood — cleaned, hygienic and delivered free across Al Ahsa and the Eastern Province. Order on WhatsApp and we deliver the same day.</p>
+    <div class="hero-btns">
+      <a class="btn btn-wa js-wa" href="#"><svg><use href="#i-wa"/></svg><span data-en="Order on WhatsApp" data-ar="اطلب عبر واتساب">Order on WhatsApp</span></a>
+      <a class="btn btn-line" href="#catalog" data-en="View Products" data-ar="شاهد المنتجات">View Products</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="wrap">
+      <div class="hf"><b>100%</b><span data-en="Fresh guaranteed" data-ar="طزاجة مضمونة">Fresh guaranteed</span></div>
+      <div class="hf"><b data-en="FREE" data-ar="مجاني">FREE</b><span data-en="Home delivery" data-ar="توصيل منزلي">Home delivery</span></div>
+      <div class="hf"><b data-en="DAILY" data-ar="يومياً">DAILY</b><span data-en="Fresh catch" data-ar="صيد طازج">Fresh catch</span></div>
+      <div class="hf"><b>0–4°C</b><span data-en="Cold chain kept" data-ar="سلسلة تبريد محفوظة">Cold chain kept</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SPECIAL OFFER ============ -->
+<div class="offer">
+  <div class="wrap">
+    <div class="poster"><img src="shrimp.jpeg" alt="Special offer — fresh shrimp 20 SR per kg" onerror="this.parentElement.remove()"></div>
+    <div class="price"><b>20</b><span>SR / KG</span></div>
+    <div>
+      <div class="lbl" data-en="Special Offer" data-ar="عرض خاص">Special Offer</div>
+      <h3 data-en="Fresh Shrimp — premium quality" data-ar="روبيان طازج — جودة ممتازة">Fresh Shrimp — premium quality</h3>
+      <p data-en="Fresh catch, cleaned and hygienic, a great source of protein. Limited stock each day — message us to confirm today's availability." data-ar="صيد طازج، منظّف وصحي، مصدر ممتاز للبروتين. الكمية محدودة يومياً — راسلنا لتأكيد التوفر اليوم.">Fresh catch, cleaned and hygienic, a great source of protein. Limited stock each day — message us to confirm today's availability.</p>
+    </div>
+    <a class="btn btn-green js-wa" href="#"><svg><use href="#i-wa"/></svg><span data-en="Order This Offer" data-ar="اطلب هذا العرض">Order This Offer</span></a>
+  </div>
+</div>
+
+<div class="strip"><div class="strip-track" id="strip"></div></div>
+
+<!-- ============ BANNER IMAGE ============ -->
+<div class="bannerimg">
+  <img src="fish_img.jpeg" alt="Fresh Sea Fish — fresh catch, free delivery" onerror="this.parentElement.remove()">
+</div>
+
+<!-- ============ TRUST ============ -->
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div class="tr rev">
+      <div class="ic"><svg><use href="#i-wave"/></svg></div>
+      <h3 data-en="Fresh Catch Everyday" data-ar="صيد طازج كل يوم">Fresh Catch Everyday</h3>
+      <p data-en="New stock arrives every morning straight from the boats. Nothing sits in the display overnight." data-ar="تصل كمية جديدة كل صباح مباشرة من القوارب. لا يبقى شيء في العرض حتى اليوم التالي.">New stock arrives every morning straight from the boats. Nothing sits in the display overnight.</p>
+    </div>
+    <div class="tr rev">
+      <div class="ic"><svg><use href="#i-shield"/></svg></div>
+      <h3 data-en="Premium Quality" data-ar="جودة ممتازة">Premium Quality</h3>
+      <p data-en="Hand-graded by size and condition. If we would not cook it at home, we do not sell it." data-ar="يُصنَّف يدوياً حسب الحجم والحالة. ما لا نطبخه في بيوتنا لا نبيعه.">Hand-graded by size and condition. If we would not cook it at home, we do not sell it.</p>
+    </div>
+    <div class="tr rev">
+      <div class="ic"><svg><use href="#i-knife"/></svg></div>
+      <h3 data-en="Cleaned &amp; Hygienic" data-ar="منظّف وصحي">Cleaned &amp; Hygienic</h3>
+      <p data-en="Scaled, gutted, filleted or cut the way you want — prepared under strict hygiene, free of charge." data-ar="تقشير وتنظيف وتفليه أو تقطيع كما تريد — يُجهَّز وفق اشتراطات صحية صارمة ودون رسوم.">Scaled, gutted, filleted or cut the way you want — prepared under strict hygiene, free of charge.</p>
+    </div>
+    <div class="tr rev">
+      <div class="ic"><svg><use href="#i-protein"/></svg></div>
+      <h3 data-en="Good Source of Protein" data-ar="مصدر ممتاز للبروتين">Good Source of Protein</h3>
+      <p data-en="Naturally rich in protein and omega-3, with no additives, no colouring and no preservatives." data-ar="غني طبيعياً بالبروتين وأوميغا ٣، بلا إضافات ولا ألوان ولا مواد حافظة.">Naturally rich in protein and omega-3, with no additives, no colouring and no preservatives.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about">
+  <div class="wrap about-in">
+    <div class="frame rev">
+      <svg class="ph"><use href="#i-fish"/></svg>
+      <img src="about.jpg" alt="" onerror="this.remove()">
+    </div>
+    <div class="rev">
+      <div class="head left" style="margin-bottom:1.5rem">
+        <span class="tag" data-en="Who We Are" data-ar="من نحن">Who We Are</span>
+        <h2 data-en="Fresh Sea Fish — from the sea to your store" data-ar="طازج البحر للأسماك — من البحر إلى متجرك">Fresh Sea Fish — from the sea to your store</h2>
+        <div class="rule"></div>
+      </div>
+      <p style="color:var(--muted)" data-en="Fresh Sea Fish (شركة طازج البحر للاسماك) supplies fresh fish, shrimp and seafood from our store on Prince Muhammed Bin Fahad Street in Al Hufuf, Al Ahsa. Our promise is in our name — sea to store, with nothing lost in between." data-ar="شركة طازج البحر للأسماك تورّد الأسماك والروبيان والمأكولات البحرية الطازجة من متجرنا في شارع الأمير محمد بن فهد بالهفوف، الأحساء. وعدنا في اسمنا — من البحر إلى المتجر، دون أن يضيع شيء بينهما.">Fresh Sea Fish (شركة طازج البحر للاسماك) supplies fresh fish, shrimp and seafood from our store on Prince Muhammed Bin Fahad Street in Al Hufuf, Al Ahsa. Our promise is in our name — sea to store, with nothing lost in between.</p>
+      <ul>
+        <li><svg><use href="#i-check"/></svg><span data-en="Fresh catch delivered to the store every single morning" data-ar="صيد طازج يصل المتجر كل صباح">Fresh catch delivered to the store every single morning</span></li>
+        <li><svg><use href="#i-check"/></svg><span data-en="Cleaning and cutting done for you at no extra charge" data-ar="التنظيف والتقطيع مجاناً دون أي رسوم">Cleaning and cutting done for you at no extra charge</span></li>
+        <li><svg><use href="#i-check"/></svg><span data-en="Free home delivery across Al Ahsa — quick and reliable" data-ar="توصيل منزلي مجاني في الأحساء — سريع وموثوق">Free home delivery across Al Ahsa — quick and reliable</span></li>
+        <li><svg><use href="#i-check"/></svg><span data-en="Registered business with full VAT invoicing for trade customers" data-ar="منشأة مسجلة مع فوترة ضريبية كاملة للعملاء التجاريين">Registered business with full VAT invoicing for trade customers</span></li>
+      </ul>
+      <div class="stats">
+        <div><b>100%</b><span data-en="Fresh guaranteed" data-ar="طزاجة مضمونة">Fresh guaranteed</span></div>
+        <div><b data-en="FREE" data-ar="مجاني">FREE</b><span data-en="Delivery in Al Ahsa" data-ar="توصيل في الأحساء">Delivery in Al Ahsa</span></div>
+        <div><b>7</b><span data-en="Days a week" data-ar="أيام في الأسبوع">Days a week</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATALOG ============ -->
+<section class="catalog" id="catalog">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="tag" data-en="Our Products" data-ar="منتجاتنا">Our Products</span>
+      <h2 data-en="What is fresh today" data-ar="ما هو طازج اليوم">What is fresh today</h2>
+      <div class="rule"></div>
+      <p data-en="Tap any item to check today's price and availability on WhatsApp. Fish is a daily market, so prices here are a guide." data-ar="اضغط أي صنف لمعرفة السعر والتوفر اليوم عبر واتساب. سوق الأسماك يومي، لذا الأسعار هنا استرشادية.">Tap any item to check today's price and availability on WhatsApp. Fish is a daily market, so prices here are a guide.</p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ============ PRICE LIST ============ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="tag" data-en="Price List" data-ar="قائمة الأسعار">Price List</span>
+      <h2 data-en="Retail and wholesale, side by side" data-ar="التجزئة والجملة جنباً إلى جنب">Retail and wholesale, side by side</h2>
+      <div class="rule"></div>
+      <p data-en="All rates are per kilogram in Saudi Riyals and exclude 15% VAT. Wholesale applies from 20 kg per item." data-ar="جميع الأسعار للكيلوغرام بالريال السعودي ولا تشمل ضريبة القيمة المضافة ١٥٪. تُطبّق أسعار الجملة من ٢٠ كجم لكل صنف.">All rates are per kilogram in Saudi Riyals and exclude 15% VAT. Wholesale applies from 20 kg per item.</p>
+    </div>
+    <div class="tablewrap rev">
+      <table>
+        <thead><tr id="thead"></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <i><span class="dot" style="background:var(--navy)"></span><span data-en="Retail per kg" data-ar="التجزئة للكيلو">Retail per kg</span></i>
+      <i><span class="dot" style="background:var(--green)"></span><span data-en="Wholesale per kg (20 kg+)" data-ar="الجملة للكيلو (٢٠ كجم فأكثر)">Wholesale per kg (20 kg+)</span></i>
+      <i><span data-en="Updated daily with the catch" data-ar="يُحدَّث يومياً مع الصيد">Updated daily with the catch</span></i>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="tag" data-en="How It Works" data-ar="كيف نعمل">How It Works</span>
+      <h2 data-en="Four steps from sea to store" data-ar="أربع خطوات من البحر إلى المتجر">Four steps from sea to store</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="steps">
+      <div class="st rev"><div class="n">01</div>
+        <h3 data-en="Caught &amp; landed" data-ar="الصيد والإنزال">Caught &amp; landed</h3>
+        <p data-en="The catch is selected at the landing site early each morning and graded by size and condition." data-ar="يُنتقى الصيد في موقع الإنزال مبكراً كل صباح ويُصنَّف حسب الحجم والحالة.">The catch is selected at the landing site early each morning and graded by size and condition.</p>
+      </div>
+      <div class="st rev"><div class="n">02</div>
+        <h3 data-en="Iced &amp; moved" data-ar="التبريد والنقل">Iced &amp; moved</h3>
+        <p data-en="Packed in ice straight away and carried to the store without breaking the cold chain." data-ar="يُعبّأ بالثلج فوراً ويُنقل إلى المتجر دون انقطاع سلسلة التبريد.">Packed in ice straight away and carried to the store without breaking the cold chain.</p>
+      </div>
+      <div class="st rev"><div class="n">03</div>
+        <h3 data-en="Cleaned to order" data-ar="التنظيف حسب الطلب">Cleaned to order</h3>
+        <p data-en="Tell us how you want it — whole, cleaned, filleted or cut into pieces. Prepared free of charge." data-ar="أخبرنا كيف تريده — كامل أو منظّف أو مفلّه أو مقطّع. يُجهَّز مجاناً.">Tell us how you want it — whole, cleaned, filleted or cut into pieces. Prepared free of charge.</p>
+      </div>
+      <div class="st rev"><div class="n">04</div>
+        <h3 data-en="Delivered free" data-ar="توصيل مجاني">Delivered free</h3>
+        <p data-en="Quick and reliable delivery to your door across Al Ahsa, at no extra cost to you." data-ar="توصيل سريع وموثوق إلى بابك في جميع أنحاء الأحساء، دون أي تكلفة إضافية.">Quick and reliable delivery to your door across Al Ahsa, at no extra cost to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHOLESALE ============ -->
+<section id="wholesale">
+  <div class="wrap b2b-in">
+    <div class="rev">
+      <div class="head left" style="margin-bottom:1.3rem">
+        <span class="tag" data-en="For Business" data-ar="للقطاع التجاري">For Business</span>
+        <h2 data-en="Supply for restaurants, hotels and catering" data-ar="توريد للمطاعم والفنادق والتموين">Supply for restaurants, hotels and catering</h2>
+        <div class="rule"></div>
+      </div>
+      <p style="color:var(--muted)" data-en="A kitchen does not want a new price every morning. It wants the same fish, the same cut, at the same hour, at a rate it can build a menu around. That is what a trade account with Fresh Sea Fish gives you." data-ar="المطبخ لا يريد سعراً جديداً كل صباح، بل يريد السمك نفسه والتقطيع نفسه في الساعة نفسها وبسعر يبني عليه قائمة الطعام. هذا ما يمنحه لك الحساب التجاري مع طازج البحر.">A kitchen does not want a new price every morning. It wants the same fish, the same cut, at the same hour, at a rate it can build a menu around. That is what a trade account with Fresh Sea Fish gives you.</p>
+      <ul>
+        <li><svg><use href="#i-check"/></svg><span data-en="Agreed contract pricing for the period" data-ar="أسعار تعاقدية متفق عليها للمدة">Agreed contract pricing for the period</span></li>
+        <li><svg><use href="#i-check"/></svg><span data-en="Your cut specification kept on file" data-ar="مواصفات التقطيع محفوظة لديكم">Your cut specification kept on file</span></li>
+        <li><svg><use href="#i-check"/></svg><span data-en="Fixed early-morning delivery before service" data-ar="توصيل صباحي ثابت قبل الخدمة">Fixed early-morning delivery before service</span></li>
+        <li><svg><use href="#i-check"/></svg><span data-en="Monthly invoicing with full VAT documentation" data-ar="فوترة شهرية مع وثائق ضريبية كاملة">Monthly invoicing with full VAT documentation</span></li>
+      </ul>
+      <a class="btn btn-navy js-wa" href="#"><svg><use href="#i-wa"/></svg><span data-en="Open a Trade Account" data-ar="افتح حساباً تجارياً">Open a Trade Account</span></a>
+    </div>
+    <div class="tiers rev">
+      <div class="tier"><div><b data-en="Retail" data-ar="تجزئة">Retail</b><small data-en="Walk-in &amp; home delivery" data-ar="بيع مباشر وتوصيل منزلي">Walk-in &amp; home delivery</small></div><span class="off list" data-en="List price" data-ar="سعر القائمة">List price</span></div>
+      <div class="tier"><div><b data-en="Restaurant" data-ar="مطاعم">Restaurant</b><small data-en="From 20 kg per item" data-ar="من ٢٠ كجم لكل صنف">From 20 kg per item</small></div><span class="off">−8%</span></div>
+      <div class="tier"><div><b data-en="Hotel &amp; Catering" data-ar="فنادق وتموين">Hotel &amp; Catering</b><small data-en="Standing daily contract" data-ar="عقد يومي ثابت">Standing daily contract</small></div><span class="off">−10%</span></div>
+      <div class="tier"><div><b data-en="Wholesale" data-ar="جملة">Wholesale</b><small data-en="Full box volumes" data-ar="كميات صناديق كاملة">Full box volumes</small></div><span class="off">−15%</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY ============ -->
+<section id="delivery" class="reviews">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="tag" data-en="Delivery" data-ar="التوصيل">Delivery</span>
+      <h2 data-en="Where we deliver" data-ar="أين نوصّل">Where we deliver</h2>
+      <div class="rule"></div>
+      <p data-en="Free home delivery across Al Ahsa — quick and reliable. Other cities in the Eastern Province by arrangement." data-ar="توصيل منزلي مجاني في جميع أنحاء الأحساء — سريع وموثوق. ومدن أخرى في المنطقة الشرقية بالتنسيق.">Free home delivery across Al Ahsa — quick and reliable. Other cities in the Eastern Province by arrangement.</p>
+    </div>
+    <div class="city-grid" id="cities"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="tag" data-en="Questions" data-ar="أسئلة">Questions</span>
+      <h2 data-en="Everything you might ask" data-ar="كل ما قد تسأل عنه">Everything you might ask</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="faqwrap" id="faqBox"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="head rev" style="margin-bottom:2.8rem">
+      <span class="tag" style="color:var(--yellow)" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</span>
+      <h2 data-en="Order today, delivered today" data-ar="اطلب اليوم واستلم اليوم">Order today, delivered today</h2>
+      <div class="rule" style="background:var(--yellow)"></div>
+    </div>
+    <div class="c-in">
+      <div class="rev">
+        <div class="c-row"><span class="ic"><svg><use href="#i-wa"/></svg></span><div><b data-en="WhatsApp / Phone" data-ar="واتساب / هاتف">WhatsApp / Phone</b><span class="js-phone"></span></div></div>
+        <div class="c-row"><span class="ic"><svg><use href="#i-pin"/></svg></span><div><b data-en="Store Address" data-ar="عنوان المتجر">Store Address</b><span data-en="Prince Muhammed Bin Fahad Street, Al Hufuf 36441, Al Ahsa, Kingdom of Saudi Arabia" data-ar="شارع الأمير محمد بن فهد، الهفوف ٣٦٤٤١، الأحساء، المملكة العربية السعودية">Prince Muhammed Bin Fahad Street, Al Hufuf 36441, Al Ahsa, Kingdom of Saudi Arabia</span></div></div>
+        <div class="c-row"><span class="ic"><svg><use href="#i-clock"/></svg></span><div><b data-en="Opening Hours" data-ar="ساعات العمل">Opening Hours</b><span data-en="Open 7 days a week" data-ar="مفتوح ٧ أيام في الأسبوع">Open 7 days a week</span></div></div>
+        <div class="c-row"><span class="ic"><svg><use href="#i-shield"/></svg></span><div><b data-en="VAT Number" data-ar="الرقم الضريبي">VAT Number</b><span>311042528200003</span></div></div>
+
+        <div class="qrbox">
+          <span class="qr"><svg><use href="#i-wa"/></svg><img src="QR-01.png" alt="WhatsApp QR" onerror="this.remove()"></span>
+          <span>
+            <b data-en="Scan to chat on WhatsApp" data-ar="امسح للدردشة على واتساب">Scan to chat on WhatsApp</b>
+            <span data-en="Point your camera at the code and send us your order." data-ar="وجّه الكاميرا نحو الرمز وأرسل لنا طلبك.">Point your camera at the code and send us your order.</span>
+          </span>
+        </div>
+      </div>
+
+      <form class="card rev" id="enq">
+        <div class="fields">
+          <div class="f"><label data-en="Your name" data-ar="الاسم">Your name</label><input required name="name" placeholder="Abdullah"></div>
+          <div class="f"><label data-en="Mobile number" data-ar="رقم الجوال">Mobile number</label><input required name="phone" placeholder="05X XXX XXXX"></div>
+          <div class="f"><label data-en="Area" data-ar="المنطقة">Area</label>
+            <select name="city"><option>Al Hufuf</option><option>Al Mubarraz</option><option>Al Ahsa (other)</option><option>Dammam</option><option>Al Khobar</option><option>Jubail</option><option>Other</option></select>
+          </div>
+          <div class="f"><label data-en="I am a" data-ar="أنا">I am a</label>
+            <select name="type"><option>Home customer</option><option>Restaurant</option><option>Hotel / Catering</option><option>Wholesale buyer</option></select>
+          </div>
+          <div class="f full"><label data-en="What do you need?" data-ar="ما الذي تحتاجه؟">What do you need?</label>
+            <textarea name="msg" placeholder="5 kg fresh shrimp cleaned, 3 kg hamour — delivery this evening"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-wa"><svg><use href="#i-wa"/></svg><span data-en="Send on WhatsApp" data-ar="أرسل عبر واتساب">Send on WhatsApp</span></button>
+        <p class="fnote" data-en="This opens WhatsApp with your message ready. Nothing is sent until you press send." data-ar="يفتح هذا واتساب ورسالتك جاهزة. لا يُرسل شيء حتى تضغط إرسال.">This opens WhatsApp with your message ready. Nothing is sent until you press send.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#top" class="logo">
+          <span class="txt" style="color:#fff">FRESH <em style="color:var(--green-l)">SEA</em> FISH
+            <small style="color:rgba(255,255,255,.5)">SEA TO STORE</small>
+          </span>
+        </a>
+        <p class="intro" data-en="Fresh Sea Fish — شركة طازج البحر للاسماك. Fresh fish, shrimp and seafood supplied daily in Al Hufuf, Al Ahsa, with free home delivery across the region." data-ar="طازج البحر للأسماك — Fresh Sea Fish. أسماك وروبيان ومأكولات بحرية طازجة تُورَّد يومياً في الهفوف بالأحساء، مع توصيل منزلي مجاني في المنطقة.">Fresh Sea Fish — شركة طازج البحر للاسماك. Fresh fish, shrimp and seafood supplied daily in Al Hufuf, Al Ahsa, with free home delivery across the region.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+          <a href="https://www.instagram.com/fresh.sea.fish" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="#" class="js-wa" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+        </div>
+        <div class="vat" data-en="VAT Registration No. 311042528200003" data-ar="الرقم الضريبي ٣١١٠٤٢٥٢٨٢٠٠٠٠٣">VAT Registration No. 311042528200003</div>
+      </div>
+      <div>
+        <h4 data-en="Explore" data-ar="تصفح">Explore</h4>
+        <a href="#about" data-en="About Us" data-ar="من نحن">About Us</a>
+        <a href="#catalog" data-en="Products" data-ar="المنتجات">Products</a>
+        <a href="#pricing" data-en="Price List" data-ar="قائمة الأسعار">Price List</a>
+        <a href="#faq" data-en="FAQ" data-ar="الأسئلة">FAQ</a>
+      </div>
+      <div>
+        <h4 data-en="Categories" data-ar="الأقسام">Categories</h4>
+        <a href="#catalog" data-en="Fresh Fish" data-ar="أسماك طازجة">Fresh Fish</a>
+        <a href="#catalog" data-en="Shrimp &amp; Prawns" data-ar="روبيان">Shrimp &amp; Prawns</a>
+        <a href="#catalog" data-en="Shellfish" data-ar="قشريات">Shellfish</a>
+        <a href="#catalog" data-en="Imported &amp; Premium" data-ar="مستورد وفاخر">Imported &amp; Premium</a>
+      </div>
+      <div>
+        <h4 data-en="Contact" data-ar="تواصل">Contact</h4>
+        <a href="#" class="js-wa js-phone"></a>
+        <a href="#contact" data-en="Prince Muhammed Bin Fahad St," data-ar="شارع الأمير محمد بن فهد،">Prince Muhammed Bin Fahad St,</a>
+        <a href="#contact" data-en="Al Hufuf 36441, Al Ahsa, KSA" data-ar="الهفوف ٣٦٤٤١، الأحساء، السعودية">Al Hufuf 36441, Al Ahsa, KSA</a>
+        <a href="#delivery" data-en="Free delivery in Al Ahsa" data-ar="توصيل مجاني في الأحساء">Free delivery in Al Ahsa</a>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>© <span id="yr"></span> Fresh Sea Fish. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></span>
+      <span>freshfishksa.com</span>
+    </div>
+  </div>
+</footer>
+
+<a class="float js-wa" href="#" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+/* =====================================================================
+   1. CONTACT
+   ===================================================================== */
+const WHATSAPP      = "966534322278";
+const PHONE_DISPLAY = "+966 53 432 2278";
+const BRAND         = "Fresh Sea Fish";
+
+/* =====================================================================
+   2. CATEGORIES
+   ===================================================================== */
+const CATS = [
+  {id:"all",   en:"All",                ar:"الكل"},
+  {id:"fish",  en:"Fresh Fish",         ar:"أسماك طازجة"},
+  {id:"shrimp",en:"Shrimp & Prawns",    ar:"روبيان"},
+  {id:"shell", en:"Shellfish",          ar:"قشريات"},
+  {id:"imp",   en:"Imported & Premium", ar:"مستورد وفاخر"}
+];
+
+/* =====================================================================
+   3. PRODUCTS   <-- CHANGE YOUR PRICES HERE
+      img: leave "" for the navy icon card. When you photograph a fish,
+           put the file next to index.html and write its name, e.g.
+           img:"hamour.jpg"
+   ===================================================================== */
+const PRODUCTS = [
+  {en:"Fresh Shrimp",                ar:"روبيان طازج",    cat:"shrimp", price:20,  size:"Medium",     origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-shrimp", tag:"offer"},
+  {en:"Jumbo Shrimp",                ar:"روبيان جامبو",   cat:"shrimp", price:45,  size:"U/10",       origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-shrimp", tag:"best"},
+  {en:"Hamour (Grouper)",            ar:"هامور",          cat:"fish",   price:65,  size:"1–3 kg",     origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-fish",   tag:"best"},
+  {en:"Sheri (Emperor)",             ar:"شعري",           cat:"fish",   price:48,  size:"800 g–2 kg", origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-fish"},
+  {en:"Zubaidi (Silver Pomfret)",    ar:"زبيدي",          cat:"fish",   price:95,  size:"400–700 g",  origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-fish",   tag:"premium"},
+  {en:"Kanaad (Kingfish)",           ar:"كنعد",           cat:"fish",   price:55,  size:"3–6 kg",     origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-fish"},
+  {en:"Safi (Rabbitfish)",           ar:"صافي",           cat:"fish",   price:38,  size:"300–500 g",  origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-fish"},
+  {en:"Sultan Ibrahim (Red Mullet)", ar:"سلطان إبراهيم",  cat:"fish",   price:42,  size:"150–250 g",  origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-fish"},
+  {en:"Hamra (Red Snapper)",         ar:"حمراء",          cat:"fish",   price:58,  size:"1–2 kg",     origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-fish"},
+  {en:"Najil (Coral Trout)",         ar:"نجل",            cat:"fish",   price:85,  size:"1–2 kg",     origin:{en:"Red Sea",ar:"البحر الأحمر"},       img:"", art:"i-fish",   tag:"premium"},
+  {en:"Blue Swimming Crab",          ar:"سلطعون أزرق",    cat:"shell",  price:40,  size:"200–350 g",  origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-crab"},
+  {en:"Rock Lobster",                ar:"شرخة",           cat:"shell",  price:180, size:"500 g–1 kg", origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-crab",   tag:"premium"},
+  {en:"Fresh Squid",                 ar:"حبار",           cat:"shell",  price:35,  size:"Medium",     origin:{en:"Arabian Gulf",ar:"الخليج العربي"}, img:"", art:"i-squid"},
+  {en:"Norwegian Salmon",            ar:"سلمون نرويجي",   cat:"imp",    price:89,  size:"4–6 kg",     origin:{en:"Norway",ar:"النرويج"},             img:"", art:"i-fish",   tag:"best"},
+  {en:"Sea Bass",                    ar:"قاروص",          cat:"imp",    price:52,  size:"400–600 g",  origin:{en:"Turkey",ar:"تركيا"},               img:"", art:"i-fish"},
+  {en:"Tilapia",                     ar:"بلطي",           cat:"imp",    price:28,  size:"400–600 g",  origin:{en:"Local Farm",ar:"مزرعة محلية"},     img:"", art:"i-fish"}
+];
+
+/* =====================================================================
+   4. DELIVERY AREAS
+   ===================================================================== */
+const CITIES = [
+  {en:"Al Hufuf",    ar:"الهفوف",     when:{en:"Free · same day", ar:"مجاني · نفس اليوم"}},
+  {en:"Al Mubarraz", ar:"المبرز",     when:{en:"Free · same day", ar:"مجاني · نفس اليوم"}},
+  {en:"Al Ahsa",     ar:"الأحساء",    when:{en:"Free · same day", ar:"مجاني · نفس اليوم"}},
+  {en:"Dammam",      ar:"الدمام",     when:{en:"On request",      ar:"عند الطلب"}},
+  {en:"Al Khobar",   ar:"الخبر",      when:{en:"On request",      ar:"عند الطلب"}},
+  {en:"Jubail",      ar:"الجبيل",     when:{en:"On request",      ar:"عند الطلب"}}
+];
+
+/* =====================================================================
+   5. FAQ
+   ===================================================================== */
+const FAQS = [
+  {q:{en:"How fresh is the fish?",ar:"ما مدى طزاجة السمك؟"},
+   a:{en:"Fresh catch arrives every day. Nothing is held over from the day before and sold as fresh. If an item is frozen, we tell you it is frozen.",
+      ar:"يصل صيد طازج كل يوم. لا نحتفظ بشيء من اليوم السابق لنبيعه على أنه طازج. وإذا كان الصنف مجمّداً نخبرك بذلك."}},
+  {q:{en:"Is delivery really free?",ar:"هل التوصيل مجاني فعلاً؟"},
+   a:{en:"Yes. Home delivery is free across Al Ahsa — quick and reliable. For Dammam, Khobar and Jubail please message us and we will arrange it.",
+      ar:"نعم. التوصيل المنزلي مجاني في جميع أنحاء الأحساء — سريع وموثوق. أما الدمام والخبر والجبيل فراسلنا وسنرتب ذلك."}},
+  {q:{en:"Do you clean and cut the fish?",ar:"هل تنظفون وتقطعون السمك؟"},
+   a:{en:"Yes, and at no extra charge. Tell us how you want it — whole, scaled and gutted, filleted, steaked or cubed — and it arrives ready for the kitchen.",
+      ar:"نعم ودون أي رسوم إضافية. أخبرنا بالطريقة التي تريدها — كامل، منظّف، مفلّه، شرائح أو مكعبات — ويصلك جاهزاً للمطبخ."}},
+  {q:{en:"How do I place an order?",ar:"كيف أطلب؟"},
+   a:{en:"Send us a WhatsApp message on +966 53 432 2278 with what you need, the quantity and your area. You can also scan the QR code on this page, or use the form below.",
+      ar:"أرسل لنا رسالة واتساب على ‎+966 53 432 2278 توضح ما تحتاجه والكمية ومنطقتك. أو امسح رمز الاستجابة السريعة في هذه الصفحة، أو استخدم النموذج أدناه."}},
+  {q:{en:"How do prices work?",ar:"كيف تُحدد الأسعار؟"},
+   a:{en:"Fish is a daily market, so the prices on this page are a guide per kilogram and exclude 15% VAT. Message us for today's confirmed price before you order.",
+      ar:"سوق الأسماك يومي، لذا الأسعار في هذه الصفحة استرشادية للكيلوغرام ولا تشمل ضريبة القيمة المضافة ١٥٪. راسلنا لمعرفة سعر اليوم المؤكد قبل الطلب."}},
+  {q:{en:"How do I pay?",ar:"كيف أدفع؟"},
+   a:{en:"Pay on delivery by cash or card, or by bank transfer beforehand. Trade accounts are invoiced monthly with full VAT documentation.",
+      ar:"ادفع عند التسليم نقداً أو بالبطاقة، أو بتحويل بنكي مسبق. أما الحسابات التجارية فتُفوتر شهرياً مع وثائق ضريبية كاملة."}},
+  {q:{en:"Can restaurants open a trade account?",ar:"هل يمكن للمطاعم فتح حساب تجاري؟"},
+   a:{en:"Yes. Send your commercial registration and VAT certificate on WhatsApp and we will set up contract pricing, a delivery window and a contact person for your kitchen.",
+      ar:"نعم. أرسل السجل التجاري والشهادة الضريبية عبر واتساب وسنجهّز السعر التعاقدي وموعد التوصيل ومسؤول تواصل لمطبخك."}},
+  {q:{en:"Where is your store?",ar:"أين يقع متجركم؟"},
+   a:{en:"Prince Muhammed Bin Fahad Street, Al Hufuf 36441, Al Ahsa, Kingdom of Saudi Arabia. You are welcome to come and choose from the display yourself.",
+      ar:"شارع الأمير محمد بن فهد، الهفوف ٣٦٤٤١، الأحساء، المملكة العربية السعودية. ونرحب بك لاختيار ما تريد من العرض بنفسك."}}
+];
+
+/* ===================================================================== */
+/* ================= ENGINE — nothing to edit below ==================== */
+/* ===================================================================== */
+let lang = "en", filter = "all";
+const $  = (s,el=document)=>el.querySelector(s);
+const $$ = (s,el=document)=>[...el.querySelectorAll(s)];
+const T  = o => lang === "ar" ? o.ar : o.en;
+const wa = msg => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+const kg = () => lang === "ar" ? "كجم" : "kg";
+
+function renderTabs(){
+  $("#tabs").innerHTML = CATS.map(c =>
+    '<button class="tab' + (c.id===filter?" on":"") + '" data-f="' + c.id + '">' + T(c) + '</button>').join("");
+  $$("#tabs .tab").forEach(b => b.onclick = () => { filter = b.dataset.f; renderTabs(); renderGrid(); });
+}
+
+function renderGrid(){
+  const list = PRODUCTS.filter(p => filter === "all" || p.cat === filter);
+  $("#grid").innerHTML = list.map(p => {
+    let flag = "";
+    if(p.tag === "offer")   flag = '<span class="flag o">' + (lang==="ar"?"عرض خاص":"Special Offer") + '</span>';
+    if(p.tag === "best")    flag = '<span class="flag">'   + (lang==="ar"?"الأكثر طلباً":"Best Seller") + '</span>';
+    if(p.tag === "premium") flag = '<span class="flag p">' + (lang==="ar"?"فاخر":"Premium") + '</span>';
+    const msg = lang === "ar"
+      ? "السلام عليكم " + BRAND + "، أرغب بمعرفة سعر وتوفر " + p.ar + " اليوم."
+      : "Hello " + BRAND + ", I'd like today's price and availability for " + p.en + ".";
+    const photo = p.img ? '<img src="' + p.img + '" alt="' + p.en + '" loading="lazy" onerror="this.remove()">' : "";
+    return '<a class="tile" target="_blank" rel="noopener" href="' + wa(msg) + '">' +
+      '<svg class="art"><use href="#' + p.art + '"/></svg>' + photo +
+      '<span class="shade"></span>' + flag +
+      '<span class="info">' +
+        '<span class="nm">' + (lang==="ar"?p.ar:p.en) + '</span>' +
+        '<span class="alt">' + (lang==="ar"?p.en:p.ar) + '</span>' +
+        '<span class="mini">' + p.size + ' · ' + T(p.origin) + '</span>' +
+        '<span class="row">' +
+          '<span class="pr">SAR ' + p.price + ' <small>/ ' + kg() + '</small></span>' +
+          '<span class="go"><svg><use href="#i-wa"/></svg></span>' +
+        '</span>' +
+      '</span></a>';
+  }).join("");
+  observe();
+}
+
+function renderTable(){
+  const h = lang === "ar"
+    ? ["الصنف","الحجم","المصدر","التجزئة","الجملة"]
+    : ["Product","Size","Origin","Retail","Wholesale"];
+  $("#thead").innerHTML = h.map(x => "<th>" + x + "</th>").join("");
+  $("#tbody").innerHTML = PRODUCTS.map(p => {
+    const w = Math.round(p.price * 0.85);
+    return "<tr>" +
+      '<td class="name">' + (lang==="ar"?p.ar:p.en) + "<em>" + (lang==="ar"?p.en:p.ar) + "</em></td>" +
+      "<td>" + p.size + "</td>" +
+      "<td>" + T(p.origin) + "</td>" +
+      '<td class="num">' + p.price + "</td>" +
+      '<td class="num w">' + w + "</td>" +
+    "</tr>";
+  }).join("");
+}
+
+function renderCities(){
+  $("#cities").innerHTML = CITIES.map(c =>
+    '<div class="ct rev"><svg><use href="#i-pin"/></svg><b>' + T(c) + "</b><small>" + T(c.when) + "</small></div>").join("");
+  observe();
+}
+
+function renderFaq(){
+  $("#faqBox").innerHTML = FAQS.map(f =>
+    '<div class="q-item"><button type="button">' + T(f.q) + "<i>+</i></button>" +
+    '<div class="a"><p>' + T(f.a) + "</p></div></div>").join("");
+  $$("#faqBox .q-item button").forEach(b => b.onclick = () => {
+    const item = b.parentElement, panel = $(".a", item), isOpen = item.classList.contains("open");
+    $$("#faqBox .q-item").forEach(x => { x.classList.remove("open"); $(".a",x).style.maxHeight = null; });
+    if(!isOpen){ item.classList.add("open"); panel.style.maxHeight = panel.scrollHeight + "px"; }
+  });
+}
+
+function renderStrip(){
+  const items = [
+    {en:"Fresh catch everyday",ar:"صيد طازج كل يوم"},
+    {en:"Free home delivery in Al Ahsa",ar:"توصيل منزلي مجاني في الأحساء"},
+    {en:"Cleaned and cut free of charge",ar:"تنظيف وتقطيع مجاناً"},
+    {en:"100% fresh guaranteed",ar:"طزاجة مضمونة ١٠٠٪"},
+    {en:"Special offer — shrimp 20 SR/kg",ar:"عرض خاص — روبيان ٢٠ ريال/كجم"},
+    {en:"Sea to store",ar:"من البحر إلى المتجر"}
+  ];
+  const row = items.map(i => "<span>&#10022; " + T(i) + "</span>").join("");
+  $("#strip").innerHTML = row + row;
+}
+
+function applyLang(){
+  const ar = lang === "ar";
+  document.documentElement.lang = ar ? "ar" : "en";
+  document.documentElement.dir  = ar ? "rtl" : "ltr";
+  $("#langBtn").textContent = ar ? "English" : "عربي";
+  $$("[data-en]").forEach(el => { el.innerHTML = ar ? el.dataset.ar : el.dataset.en; });
+  renderTabs(); renderGrid(); renderTable(); renderCities(); renderFaq(); renderStrip();
+}
+
+function observe(){
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+  }), {threshold:.1});
+  $$(".rev:not(.in)").forEach(el => io.observe(el));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  $("#yr").textContent = new Date().getFullYear();
+  $$(".js-phone").forEach(el => el.textContent = PHONE_DISPLAY);
+  $$(".js-tel").forEach(a => a.href = "tel:+" + WHATSAPP);
+  $$(".js-wa").forEach(a => {
+    a.href = wa("Hello " + BRAND + ", I would like to place an order.");
+    a.target = "_blank"; a.rel = "noopener";
+  });
+
+  $("#burger").onclick = () => $("#links").classList.toggle("show");
+  $$("#links a").forEach(a => a.onclick = () => $("#links").classList.remove("show"));
+  addEventListener("scroll", () => $("#hdr").classList.toggle("small", scrollY > 40));
+
+  $("#enq").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const msg = lang === "ar"
+      ? "طلب جديد من موقع " + BRAND + "\n\nالاسم: " + f.get("name") + "\nالجوال: " + f.get("phone") +
+        "\nالمنطقة: " + f.get("city") + "\nالنوع: " + f.get("type") + "\n\nالطلب: " + (f.get("msg") || "-")
+      : "New order from the " + BRAND + " website\n\nName: " + f.get("name") + "\nMobile: " + f.get("phone") +
+        "\nArea: " + f.get("city") + "\nCustomer type: " + f.get("type") + "\n\nRequirement: " + (f.get("msg") || "-");
+    window.open(wa(msg), "_blank", "noopener");
+  });
+
+  applyLang();
+  $("#langBtn").onclick = () => { lang = lang === "en" ? "ar" : "en"; applyLang(); };
+  observe();
+});
+</script>
+</body>
+</html>
